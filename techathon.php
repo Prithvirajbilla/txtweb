@@ -12,7 +12,7 @@ include_once('config_techathon.php');
 	//extracting the parameter "txtweb-message" from the http request sent by txtWeb
 	if(isset($_GET['txtweb-message']) && $_GET['txtweb-message'] != "") {
 		$user_mobile = $_REQUEST['txtweb-mobile']; 
-		$response = $_GET['txtweb-message']."."$user_mobile"."\n";
+		$response = $_GET['txtweb-message'].".".$user_mobile"."\n";
 		$f = fopen("responses.txt","a");
 		fwrite($f, $response);
 		fclose($f);
